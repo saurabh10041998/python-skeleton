@@ -1,0 +1,16 @@
+[project]
+name = "hyperctl"
+authors = [
+    { name = "saurabh shinde", email = "shindesaurabhpict@gmail.com" }
+]
+requires-python=">=3.8"
+dynamic = ["version"]
+
+[project.scripts]
+hyperctl = "hyperctl.__main__:hyperctl_entry_point"
+
+[tools.setuptools]
+packages = ["hyperctl", "hyperctl.cmd"]
+
+[tools.setuptools.dynamic]
+version = { attr = "hyperctl.__version__" }
